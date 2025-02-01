@@ -1,0 +1,49 @@
+{
+  "name": "formularioreserva",
+  "version": "1.0.0",
+  "description": "formulario restaurante",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/l-dstructordqks/ReservationForm-PHP-Composer-.git"
+  },
+  "keywords": [
+    "SASS",
+    "NPM",
+    "Gulp",
+    "Composer"
+  ],
+  "author": "Sebastian @l-dstructordqks",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/l-dstructordqks/ReservationForm-PHP-Composer-/issues"
+  },
+  "homepage": "https://github.com/l-dstructordqks/ReservationForm-PHP-Composer-#readme",
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "cssnano": "^7.0.6",
+    "gulp": "^5.0.0",
+    "gulp-autoprefixer": "^9.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^10.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser": "^2.1.0",
+    "gulp-terser-js": "^5.2.2",
+    "sass": "^1.83.4",
+    "style-loader": "^4.0.0",
+    "terser": "^5.36.0",
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1"
+  }
+}

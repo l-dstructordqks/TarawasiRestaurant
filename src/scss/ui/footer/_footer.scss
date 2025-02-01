@@ -1,0 +1,23 @@
+.footer {
+    height: 100vh;
+}
+.footer-info{
+    //padding-top: 4rem;
+    padding: 8rem 0rem;
+}
+.footer__link {
+    display: flex;
+    font-size: 1.7rem;
+}
+.footer-p {
+    color: #d3c7a1;
+}
+.footer-hr {
+    margin-top: 2rem;
+    color: #d3c7a1;
+}
+.footer__link-logo {
+    //width: 130px;
+    height: auto;
+    justify-content: center;
+}

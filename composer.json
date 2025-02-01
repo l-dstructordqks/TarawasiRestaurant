@@ -1,0 +1,22 @@
+{
+    "name": "sebasldstructor/reservation-form",
+    "description": "ReservationForm MVC",
+    "type": "project",
+    "authors": [
+        {
+            "name": "L-dstructordqlos",
+            "email": "s404990099@gmail.com"
+        }
+    ],
+    "require": {
+            "benhall14/php-calendar": "^2.0"
+        },
+    "autoload": {
+        "psr-4": {
+            "MVC\\" : "./",
+            "Controllers\\" : "./controllers",
+            "Model\\" : "./models",
+            "Classes\\" : "./classes"
+        }
+    }
+}

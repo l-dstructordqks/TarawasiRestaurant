@@ -1,0 +1,79 @@
+@use 'base/mixins' as m;
+
+
+.menu-bar {
+    width: 24px;
+    height: 24px;
+    background-image: url('../img/menu-icon.svg');
+    transition: background-image 300ms ease-in-out;
+    &.clicked {
+        background-image: url('../img/close-icon.svg');
+    }
+}
+.menu-burger {
+    //top: -100vh;
+    top: 0;
+    //left: 0;
+    left: -50%;
+    //right: 0;
+    position: fixed;
+    width: 50%;
+    height: 100vh;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    background-color: #202224f0;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.24);
+    z-index: 1;
+    //transition: top 550ms ease-in-out;
+    transition: left 500ms ease-in-out;
+    &.open {
+        //top: 0;
+        left: 0;
+    }
+}
+.nav-container {
+    padding-left: 12%;
+    padding-bottom: 5%;
+}
+.nav-list{
+    list-style: none;
+}
+
+.nav-section {
+    color: #f5f6f7;
+    text-transform: uppercase;
+    letter-spacing: 16.6%;
+    font-size: 1.8rem;
+    @include m.flow-text(1rem, 1.7rem);
+    font-weight: 500;
+    padding-left: 1rem;
+}
+#marker {
+    width: 0%;
+    height: 2px;
+    background-color: #f5f6f7;
+    transition: 
+        width 200ms ease-in,
+        margin 200ms ease-in-out;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    &:hover {
+        width: 80%;
+    }
+}
+.nav-section:hover ~ 
+#marker
+{
+    width: 80%;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+.current {
+    #marker
+    {
+        width: 80%;
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+}

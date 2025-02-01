@@ -1,0 +1,98 @@
+@use 'mixins' as m;
+
+h1 {
+    margin: 0 auto;
+    color: #77726c;
+    font-weight: 700;
+    font-style: normal;
+    @include m.flow-text(2.1rem, 3.1rem);
+    span {
+        font-style: italic;
+        @include m.flow-text(1.1rem, 2rem);
+    }
+}
+h2 {
+    font-weight: 700;
+    font-style: normal;
+    @include m.flow-text(2rem, 3rem);
+    //font-weight: 700;
+    
+}
+hr {
+    width: calc(100% + 1rem);
+    color: #202123;
+    &.main {
+        color: #dcbf94;
+    }
+}
+
+p {
+    //color: #77726c;
+    &.main {
+        color: #bcb5b1;
+    }
+    color: #202123;
+    font-size: 18px;
+    font-weight: 300;
+    @include m.flow-text(.8rem, 1.4rem);
+}
+.text-center {
+    text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    //background-color: #3a3a3a;
+    //background-color: #77726c;
+    text-align: right;    
+}
+
+
+.title {
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 16%;
+    padding: 0 2rem;
+    &.main {
+        color: #dcbf94; 
+    }
+    color: #202123;
+    span {
+        text-transform: none;
+        letter-spacing: normal;
+        font-weight: 300;
+    }
+
+    /*&-first {
+        color: #d3c7a1;
+    }*/
+    //padding-bottom: 1rem;
+}
+.general-paragraph {
+    padding: 2rem 1rem;
+}
+
+.paragraph-logo {
+    color: #000;
+    font-weight: 500;
+    letter-spacing: 16%;
+    text-align: center;
+    &-h {
+        font-size: .8rem;
+    }
+    &-f {
+        font-size: 3.8rem;
+    }
+}
+
+
+.small-line {
+    max-width: 500px;
+}
+.smaller-line {
+    max-width: 350px;
+}
+.right {
+    margin: 0 0 0 auto;
+}

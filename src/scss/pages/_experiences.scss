@@ -1,0 +1,39 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.experiences{
+    &-body {
+    //display: flex;
+    margin: 8rem auto;
+    max-width: 1140px;
+    }
+    &-title {
+        padding-bottom: 4rem;
+    }
+}
+.experience {
+    display: flex;
+    gap: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 4rem;
+    &-info {
+        width: 40%;
+        hr {
+            width: 100%;
+        }
+    }
+    &-images {
+        width: 60%;
+        @include m.grid(12, .5rem)
+    }
+    &-title {
+        //padding-top: 4rem;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        font-weight: 500;
+        padding-bottom: .5rem;
+    }
+    &-text {
+        padding: 1rem 0;
+    }
+}
