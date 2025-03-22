@@ -1,0 +1,230 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+.container-bg {
+    padding: 0rem 1.2rem;
+}
+.first {
+    background-color: #202123;
+    height: 100vh;
+}
+.bg-container {
+    height: 60vh;
+    //align-items: center center;
+    //width: 100vw;
+    //margin-top: 83px;
+    //background-image: url('../img/bg_inicio.jpg');
+    background-position: 50% 50%;
+    background-size: cover;
+    @include m.phone {
+        height: 100vh;
+    }
+    &-start {
+        width: 100%;
+        background-image: url('../img/bg_inicio.jpg');
+
+    }
+    &-menu {
+        //width: 60%;
+        background-image: url('../img/menu2.jpg');
+    }
+}
+
+//PROVE
+.bg-start-prove {
+    height: 100vh;
+    width: 100%;
+    //position: fixed;
+    background-color: #393836;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    transition: 2s;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .started {
+        background-color: #00000000;
+        opacity: 0 !important;
+    }
+
+}
+.started {
+    background-color: #00000000;
+    opacity: 0 !important;
+}
+.bg-start-prove-image {
+    background-image: url('../img/sinfondo.png');
+    width: 30vw;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 5;
+    margin: 0 auto;
+    height: 70vh;
+    transition: 2s;
+
+    .started {
+        opacity: 0;
+    }
+}
+/*
+.bg-menu {
+    height: 100vh;
+
+}*/
+.text-container {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+.first-container {
+    background-color: #202123;
+    padding: 0rem 1.2rem;
+}
+.image-container{
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    padding-left: .7rem;
+    padding-right: .7rem;
+    height: 50vh;
+    @include m.phone {
+        padding-top: 5rem;
+        padding-bottom: 3rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        height: 100vh;
+    }
+    &-1 {
+        @include m.grid(12, .7rem);
+        //height: 100vh;
+        //display: grid;
+        @include m.phone {
+            gap: 2rem;
+        }
+    }
+    &-2 {
+        @include m.grid(9, .7rem);
+        //height: 100vh;
+        //display: grid;
+        @include m.phone {
+            gap: 2rem;
+        }
+    }
+}
+
+.image-main {
+    &-1 {
+        @include m.grid-span(7);
+        background-image: url('../img/colibri.jpg');
+        background-position: 50% 50%;
+        background-size: cover;
+    }
+    &-2 {
+        //height: 90%;
+        @include m.grid-span(3);
+        background-image: url('../img/tarawasi-1.jpg');
+        background-position: 50% 50%;
+        background-size: cover;
+    }
+    
+}
+.image-secondary {
+    &-1 {
+        @include m.grid-span(5);
+        display: grid;
+        grid-template-rows: repeat(6, 1fr);
+        gap: .7rem;
+        @include m.phone {
+            gap: 2rem;
+        }
+        &-a {
+            grid-row: span 3;
+            background-image: url('../img/comida.jpg');
+            background-position: 50% 50%;
+            background-size: cover;
+        }
+        &-b {
+            grid-row: span 3;
+            background-image: url('../img/panes.png');
+            background-position: 50% 50%;
+            background-size: cover;
+        }
+    }
+    &-2 {
+        @include m.grid-span(6);
+        display: grid;
+        grid-template-rows: repeat(7, 1fr);
+        gap: .7rem;
+        @include m.phone {
+            gap: 2rem;
+        }
+        
+        &-a {
+            grid-row: span 3;
+            background-image: url('../img/causa-1.png');
+            background-position: 50% 50%;
+            background-size: cover;
+        }
+        &-b {
+            grid-row: span 4;
+            background-image: url('../img/cuadros-1.jpg');
+            background-position: 50% 50%;
+            background-size: cover;
+        }
+    }
+}
+.v-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.cspan-1 {
+    @include m.grid-span(1);
+}
+.cspan-2 {
+    @include m.grid-span(2);
+}
+.cspan-3 {
+    @include m.grid-span(3);
+}
+.cspan-4 {
+    @include m.grid-span(4);
+}
+.cspan-5 {
+    @include m.grid-span(5);
+}
+.cspan-6 {
+    @include m.grid-span(6);
+}
+.cspan-7 {
+    @include m.grid-span(7);
+}
+.cspan-8 {
+    @include m.grid-span(8);
+}
+.cspan-9 {
+    @include m.grid-span(9);
+}
+.cspan-10 {
+    @include m.grid-span(10);
+}
+.cspan-12 {
+    @include m.grid-span(12);
+}
+
+.container-book {
+    max-width: 400px;
+    margin: 0 auto;
+}
+.container-booking{
+    width: 200px;
+    margin: 2rem auto;
+    @include m.phone {
+        width: 400px;
+    }
+}
+.button-book {
+    @include m.button(#00000000, #202123 ,#bcb5b1);
+}

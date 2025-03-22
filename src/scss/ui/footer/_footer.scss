@@ -1,0 +1,39 @@
+@use 'base/mixins' as m;
+
+
+.footer {
+    height: 60vh;
+    @include m.phone {
+        height: 100vh;
+    }
+}
+.footer-info{
+    //padding-top: 4rem;
+    padding: 6rem 0rem;
+    @include m.phone {
+        padding: 8rem 0rem;
+    }
+}
+.footer__link {
+    display: flex;
+    font-size: 1.7rem;
+}
+.footer-p {
+    color: #d3c7a1;
+    //font-size: ;
+    //@include m.flow-text(.5rem, 1.4rem);
+
+}
+.footer-hr {
+    margin-top: 2rem;
+    color: #d3c7a1;
+}
+.footer__link-logo {
+    width: 100vw;
+    height: auto;
+    justify-content: center;
+    
+    img {
+        width: 100vw;
+    }
+}

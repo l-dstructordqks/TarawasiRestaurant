@@ -1,0 +1,35 @@
+.admin {
+    &__header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        background: #a6a6a6;
+        color: #fff;
+        width: 9%;
+    }
+    &__navigation {
+        height: 100%;
+        
+        &-element {
+            height: 25%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 1rem;
+        }
+    }
+    &__content {
+        width: 91vw;
+        margin-right: 0;
+        margin-left: auto;
+        width: 91%;
+        padding: 0 1rem;
+    }
+}
+.element-icon {
+    margin: 0 auto;
+}
+.element-link {
+    margin: 0 auto;
+}

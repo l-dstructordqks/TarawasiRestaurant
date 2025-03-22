@@ -1,0 +1,82 @@
+@use 'variables' as v;
+.dark-mode {
+    background-color: v.$gray-3;
+
+    .booking__container {
+        background-color: v.$black;
+    }
+
+    p, h2, h3, th, td, input, span {
+        color: v.$white;
+    }
+    // FORM
+    .people__counter-container {
+        
+        border: solid 1.2px v.$gray-2;
+        & .counter-button {
+
+            border: solid 1px v.$gray-3;
+            &-icon {
+                & .icon {
+                    fill: v.$gray-bobo;
+                }
+            }
+            &:hover {
+                border: solid 1px v.$white;
+                cursor: pointer;
+                & .icon {
+                    fill: v.$white;
+                }
+            }
+        }
+    }
+    .booking__service-buttons {
+        background: v.$gray-bobo;
+    }
+    
+    .personal__input {
+        color: v.$white;
+        background: none;
+        border: 1px solid v.$gray-3;
+        &:hover {
+            border-color: v.$white;
+            background-color: transparent;
+            color: v.$white;
+        }
+        &:focus {
+            border-color: v.$white;
+            background-color: transparent;
+            //background-color: v.$white;
+        }
+    }
+    .personal__input:focus ~ 
+    .personal__label
+    {
+        color: v.$gray-3;
+    }
+    .personal__input:hover ~ 
+    .personal__label
+    {
+        color: v.$white;
+    }
+    .personal__input:not(:placeholder-shown) {
+        //border-color: transparent;
+        &:hover {
+            border-color: v.$white;
+        }
+        &:focus {
+            border-color: v.$white;
+        }
+    }
+    .personal__input:not(:placeholder-shown) ~ 
+    .personal__label {
+        color: v.$gray-3;
+    }
+    // CALENDAR
+    .cal-day-box{
+        &:hover {
+            //background-color: black;
+            border: solid 1.2px v.$white;
+        }
+    }
+}

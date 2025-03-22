@@ -1,0 +1,97 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.booking__calendar {
+    margin: 2rem auto;
+    min-width: 250px;
+    max-width: 400px;
+}
+// Calendar
+.before,
+.reserved,
+.today {
+    background: none !important;
+    .cal-day-box {
+        border: none;
+        color: #202123 !important;
+        text-decoration: line-through !important;
+        &:hover {
+            background-color: unset;
+            border: unset;
+            color: v.$gray-4 !important;
+            
+            cursor: unset;
+        }
+    }
+}
+.selected {
+    .cal-day-box {
+        background-color: v.$black;
+        color: v.$white;
+
+    }
+}
+.calendar {
+    max-width: 100% !important;
+    background: transparent !important;
+    color: #202123 !important;
+    border-radius: 1rem;
+    & .cal-th {
+        background: none !important;
+    }
+
+    &-title {
+        th {
+            background: none !important;
+        }
+    }
+
+    thead {
+        font-family: "Cormorant Garamond",serif;
+        font-weight: 700;
+        @include m.flow-text(.8rem, 1.6rem);
+    }
+    
+}
+.pad {
+    background: none !important;
+}
+.cal-event-box{
+    display: none !important;
+}
+
+.cal-day-box{
+    font-family: "Cormorant Garamond",serif;
+    @include m.flow-text(.8rem, 1.4rem);
+    //border: solid 1.2px;
+    border-radius: 8px;
+    margin: 6px auto;
+    height: 37px !important;
+    width: 37px !important;
+    align-content: center !important;
+
+    &:hover {
+        //background-color: black;
+        border: solid 1.2px #202123;
+        //border-radius: 50% 50%;
+        //color: white !important;
+
+        cursor: pointer;
+    }
+}
+.calendar-heading {
+    display: flex;
+    align-items: center;
+}
+
+.button-arrow {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    margin: 6px auto;
+}
+.month-name {
+    font-weight: 700;
+    @include m.flow-text(.8rem, 1.8rem);
+}

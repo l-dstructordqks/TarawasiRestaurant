@@ -1,0 +1,70 @@
+@use 'variables' as v;
+
+@font-face {
+    font-family: v.$boldFont;
+    src: url(v.$boldFont-path);
+}
+@font-face {
+    font-family: v.$regularFont;
+    src: url(v.$regularFont-path);
+}
+@font-face {
+    font-family: v.$lightFont;
+    src: url(v.$lightFont-path);
+}
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    //font-size: 62.5%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+body {
+    //height: 100vh;
+    font-family: "Cormorant Garamond", serif;
+    //display: grid;
+    place-items: center;
+    font-size: 1.2rem; //USAR CLAMP
+    line-height: 1.6;
+    background-color: #f7f6f5;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    //background-color: #cac0b3;
+    //background-color: rgb(186, 179, 166);
+    //background-color: #f1ede5;
+    //background-color: #efece6;
+    //background-color: #efece6;
+    //scroll-padding-top: 20rem;
+}
+main {
+    width: 100%;
+}
+
+
+.conatiner {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+}
+
+// input default styles
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+  }
+

@@ -1,0 +1,143 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.menu {
+    //display: grid;
+    width: 100%;
+    //height: 100vh;
+    //@include m.grid(10, 0rem);
+    display: flex;
+    flex-direction: column;
+    @include m.phone {
+        height: 100vh;
+        @include m.grid(10, 0rem);
+    }
+    &-body {
+        display: flex;
+        flex-direction: column;
+        margin: 8rem auto;
+        max-width: 1140px;
+        //@include m.grid(10, 0rem);
+        @include m.phone {
+            flex-direction: row;
+        }
+    }
+    &-image {
+    }
+    &-container {
+        padding: 0rem 1rem 0rem 1rem;
+        @include m.phone {
+            padding: 0rem 2rem 0rem 6rem;
+        }
+    }
+    &-list {
+        width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        //@include m.grid(10, 0rem);
+        &-text {
+            padding-top: 2rem;
+            padding-bottom: 3rem;
+            text-align: left;
+        }
+        @include m.phone {
+            width: 41.666%;
+            padding-left: 8rem;
+            &-text {
+                padding-top: 4rem;
+                padding-bottom: 5rem;
+                text-align: center;
+            }
+        }
+        
+    }
+    &-text {
+        padding-top: 2rem;
+        padding-bottom: 2.5rem;
+    }
+    &-line {
+        color: #202123;
+        max-width: 170px;
+        margin: 0;
+        text-align: left;
+        @include m.phone {
+            text-align: center;
+            margin: 0 auto;
+        }
+    }
+    &-section {
+        color: #202123;
+        text-align: left;
+        @include m.phone {
+            text-align: center;
+        }
+    }
+    &-p {
+        color: #77726c;
+        font-weight: 500;
+        &-intro {
+            color: #202123;
+            padding-bottom: 1.5rem;
+            font-weight: 500;
+        }
+    }
+    &-paragraph,
+    &-title {
+        text-align: center;
+        @include m.phone {
+            text-align: left;
+        }
+    }
+}
+.dish-images {
+    width: 100%;
+    height: 70vh;
+
+    //padding: 3rem 1rem 3rem 5rem;
+    @include m.grid(12, 1.5rem);
+    padding: 3rem 1.7rem;
+    @include m.phone {
+        width: 58.333333%;
+        height: auto;
+        padding: 3rem 0rem;
+        //@include m.grid(12, .7rem);
+        gap: .7rem;
+    }
+}
+.dish-1 {
+    background-image: url('../img/dish-1.jpg');
+    height: 60%;
+    background-position: 50% 50%;
+    background-size: cover;
+    margin: auto 0 0 0;
+}
+.dish-2 {
+    background-image: url('../img/dish-2.jpg');
+    background-position: 50% 50%;
+    background-size: cover;
+                            
+}
+.dish-3 {
+    background-image: url('../img/dish-3.jpg');
+    background-position: 50% 50%;
+    background-size: cover;
+                                                                         
+}
+.dish-name {
+    color: #77726c;
+    font-weight: bold;
+    padding-bottom: 1.3rem;
+    //text-align: center;
+    i {
+        font-weight: 300;
+    }
+    text-align: left;
+    @include m.phone {
+        text-align: center;
+    }
+}
+
+.button-menu {
+   @include m.button(#00000000, #202123 ,#bcb5b1);
+   //@include m.container;
+}

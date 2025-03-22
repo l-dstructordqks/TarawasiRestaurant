@@ -1,0 +1,115 @@
+@use 'base/variables' as v;
+
+.booking__service-buttons{
+    display: flex;
+    gap: 4px;
+    border-radius: 8px;
+    //padding: 4px 4px;
+    //background: v.$gray-2;
+    height: auto;
+    border: solid 1px #77726c;
+    width: 250px;
+}
+.button-service{
+    text-decoration: none;
+    //padding: 2px 40px;
+    //background-color: transparent;
+    //border: solid 1px transparent;
+    color: #202123;
+    border-radius: 8px;
+    //@include m.flow-text(1.3rem, 1.5rem);
+    font-size: 1.5rem;
+    font-family: inherit;
+    font-weight: 300;
+    width: 100%;
+    text-align: center;
+    
+    &:hover {
+        //background-color: v.$white;
+        //border-color: v.$gray-1;
+        //color: v.$black;
+        font-weight: 700;
+
+        /*background-color: v.$black;
+        border-color: v.$gray-1;
+        color: v.$white;*/
+    }
+    &.selected {
+        background-color: #3a3a3a;
+        //border-color: v.$gray-1;
+        color: #f5f6f7;
+        font-weight: 500;
+    }
+    
+}
+
+.people__counter-container {
+    display: none;
+    gap: 1rem;
+    background-color: transparent;
+    padding: 2px 15px;
+    align-items: center;
+    font-family: v.$boldFont;
+    border: solid 1.2px v.$gray-5;
+    border-radius: 8px;
+    & .counter-button {
+        display: flex;
+        align-items: center;
+        margin: 6px auto;
+        height: 32px;
+        width: 32px;
+        font-size: 18px;
+        border: solid 1px v.$gray-1;
+        //color: #353535;
+        border-radius: 50% 50%;
+        background-color: transparent;
+        //align-content: center;
+        &-icon {
+            display: flex;
+            margin: auto;
+            & .icon {
+                fill: v.$gray-4;
+                height: 22px;
+                width: 22px;
+            }
+        }
+        &:hover {
+            border: solid 1px v.$black;
+            cursor: pointer;
+            & .icon {
+                fill: v.$black;
+            }
+        }
+    }
+
+    &.show {
+        display: flex !important; 
+    }
+}
+
+.diners {
+    border: 1px solid #77726c;
+    display: flex;
+    justify-content: center;
+    min-width: 134px;
+    border-radius: 8px;
+    height: 100%;
+}
+
+.right {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    .dark-mode-button {
+        width: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        fill: v.$black;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+    }
+}

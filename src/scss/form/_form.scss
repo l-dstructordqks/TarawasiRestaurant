@@ -1,0 +1,233 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.booking__container{
+    //position: relative;
+    width: 100%;
+    //max-width: 51.25rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    //background-color: v.$white;
+    border-radius: 5px;
+    padding-top: 4rem;
+    @include m.phone {
+        //width: 100%;
+        max-width: 51.25rem;
+    }
+}
+.booking-info {
+    padding-top: 4rem;
+}
+.booking__personal{
+    margin: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    @include m.phone {
+        margin: 2rem 3rem;
+    }
+}
+.booking__personal-inputs {
+    @include m.grid(12, 1rem);
+}
+.booking__personal-input {
+    position: relative;
+    height: 4rem;
+    align-items: center;
+    margin-bottom: .2rem;
+    &-info {
+        height: 7rem;
+        @include m.grid-span(12);
+    }
+    &-name {
+        @include m.grid-span(12);
+    }
+    &-prefix {
+        @include m.grid-span(4);
+    }
+    &-phone {
+        @include m.grid-span(8);
+    }
+    &-email {
+        @include m.grid-span(12);
+    }
+
+    @include m.phone {
+        &-prefix {
+            @include m.grid-span(2);
+        }
+        &-phone {
+            @include m.grid-span(4);
+        }
+        &-email {
+            @include m.grid-span(6);
+        }
+    }
+    /*display: flex;
+    justify-content: space-between;*/
+}
+.booking__firststep {
+    margin: 0 auto;
+    padding: 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    @include m.phone {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2rem;
+        
+    }
+
+    .booking__people {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        //gap: 2.5rem;
+        width: 100%;
+        &-select {
+            text-decoration: none;
+        }
+        @include m.phone {
+            width: 350px;
+        }
+    }
+    
+    .booking__service {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        //gap: 2.5rem;
+        width: 100%;
+        @include m.phone {
+            width: 350px;
+        }
+    }
+}
+.booking__section {
+    font-weight: 700;
+    @include m.flow-text(1rem, 1.5rem);
+}
+
+.personal__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    font-family: "Cormorant Garamond",serif;
+    @include m.flow-text(.8rem, 1.4rem);
+    color: #202123;
+    outline: none;
+    padding: 1rem 0 0 1.3rem;
+    background: none;
+    border: 1px solid #77726c;
+    font-weight: 500;
+    &:hover {
+        border-color: #202123;
+        //background-color: v.$white;
+        border-width: 1.6px;
+        color: #202123;
+    }
+    &:focus {
+        border-color: #202123;
+        //background-color: v.$white;
+        //border-radius: 6px !important;
+        border-width: 1.6px;
+    }
+    &-info {
+        padding-top: 1.5rem;
+        //height: 200%;
+    }
+    
+    /* FORM WITHOUT SPACES
+    &-name {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    &-surname {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    &-prefix {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    &-phone {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    &-email {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }*/
+}
+.personal__input:focus ~ 
+.personal__label
+{
+    top: 0rem;
+    @include m.flow-text(.8rem, 1.2rem);
+    //font-size: 0.9rem;
+    left: 0.8rem;
+    color: #77726c;
+    font-style: italic;
+}
+.personal__input:hover ~ 
+.personal__label
+{
+    color: #202123;
+}
+.personal__input:not(:placeholder-shown) {
+    //border-color: transparent;
+    &:hover {
+        border-color: #202123;
+    }
+    &:focus {
+        border-color: #202123;
+    }
+}
+.personal__input:not(:placeholder-shown) ~ 
+.personal__label {
+    top: 0rem;
+    @include m.flow-text(.8rem, 1.2rem);
+    left: 0.8rem;
+    color: #77726c;
+    font-style: italic;
+  }
+
+.personal__label {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    padding: 0 0.5rem;
+    @include m.flow-text(.8rem, 1.4rem);
+    color: #77726c;
+    cursor: text;
+    transition: top,
+    left 200ms ease-in,
+    font-size 200ms ease-in;
+}
+
+.options-bar{
+    display: flex;
+    background-color: none;
+    min-width: 345px;
+    min-height: 50px;
+    justify-content: center;
+    @include m.phone {
+        justify-content: space-between;
+    }
+}

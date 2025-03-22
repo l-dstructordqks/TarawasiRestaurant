@@ -1,0 +1,16 @@
+.home {
+    &__heading {
+        
+    }
+    &__containers {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        padding: 1rem 1rem;
+    }
+    &__container {
+        border-radius: 8px;
+        border: 1.5px solid #6e6e6e;
+        height: 42vh;
+    }
+}
